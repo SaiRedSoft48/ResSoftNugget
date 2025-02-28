@@ -12,7 +12,7 @@ const MarqueeScroll: React.FC = () => {
       <div className="absolute top-0 right-0 h-full w-[100px] bg-gradient-to-l from-black to-transparent pointer-events-none md:z-10" />
       <Marquee direction="left" speed={60}>
         {[zomato, blinkit, hyperpure, district, zomato, blinkit, hyperpure, district].map((img, index) => (
-          <div key={index} className="mx-[40px]">
+          <div key={index} className="mx-[20px] md:mx-[40px]">
             <img className="w-[120px] md:w-[200px]" src={img} alt="Brand" />
           </div>
         ))}
