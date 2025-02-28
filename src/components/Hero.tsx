@@ -14,7 +14,7 @@ const Hero: React.FC = () => {
                     <p className="text-[#A3A3A3] text-md md:text-xl text-center md:px-4">
                         Handling complex queries, boosting efficiency, and streamlining support, so your business scales faster with precision.
                     </p>
-                    <Button />
+                    <Button size="text-md" pd="px-3 py-2" />
                 </div>
             </div>
             <div className='flex flex-col justify-center items-center'>

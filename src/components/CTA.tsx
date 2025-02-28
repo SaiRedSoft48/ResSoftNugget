@@ -13,7 +13,7 @@ const CTA: React.FC = () => {
                     <p className="text-[#A3A3A3] text-md md:text-xl text-center md:px-4">
                         Get started and see how AI can transform your customer interactions—faster, smarter, better.
                     </p>
-                    <Button />
+                    <Button size="text-sm" pd="px-2.5 py-1.5" />
                 </div>
             </div>
         </div>

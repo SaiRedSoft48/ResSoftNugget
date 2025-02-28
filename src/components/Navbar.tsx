@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
                 <div>
                     <img className="w-[110px] h-[25px] md:w-[160px] md:h-[40px]" src={logo} alt="logo" />
                 </div>
-                <Button />
+                <Button size="text-sm" pd="px-2.5 py-1.5" />
             </div>
         </div>
     );
