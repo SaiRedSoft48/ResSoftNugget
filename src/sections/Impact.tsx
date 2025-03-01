@@ -29,20 +29,18 @@ const ImpactData: Impact[] = [{
 },]
 const Impact: React.FC = () => {
     return (
-        <div className='bg-black py-2'>
+        <div className='bg-black py-6'>
             <div className='flex flex-col gap-2 items-center'>
-                <h1 className="text-white text-xl md:text-7xl text-center ">
+                <h1 className="text-white text-2xl md:text-[48px] md:leading-[60px] font-semibold">
                     Maximize Efficiency
                 </h1>
-                <p className="text-[#A3A3A3] text-md md:text-xl text-center px-2 md:px-4">
+                <p className="text-[#A3A3A3] text-md md:text-lg my-2">
                     Optimize workflows, drive faster issue resolutions, and achieve measurable cost reductions
                 </p>
                 <div className='flex flex-col md:flex-row justify-between items-center md:w-[85%] mt-2'>
                     {ImpactData.map((card) => <ImpactCard key={card.id} card={card} />)}
                 </div>
             </div>
-
-
         </div>
     )
 }
