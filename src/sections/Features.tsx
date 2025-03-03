@@ -42,7 +42,7 @@ const Agents = [{
     headline: "Contextual Actions",
     description: "Recommends optimal actions for quicker resolution"
 }, {
-    id: "3", image: time,
+    id: "4", image: time,
     headline: "Real-Time Assistance",
     description: "Smartly engages with data sources to provide updated information"
 },]
@@ -63,115 +63,82 @@ const Features: React.FC = () => {
                 </div>
             </div>
             <div className='md:h-[240vh] flex flex-row justify-center items-start w-[100%] pt-8'>
+             
                 <div className='md:h-[230vh] flex flex-col justify-center items-center w-[90%]'>
-                    <div className='md:h-[60%] w-[100%] flex flex-col-reverse md:flex-row justify-center items-center'>
-                        <div className='md:h-[100%] md:w-[33.3%] sm:-order-4 md:order-none'>
-                            <div className='h-[60vh] md:h-[50%] flex flex-col justify-start items-start gap-2 pl-3 md:border-r border-b border-[#262626]'>
-                                <h1 className='text-white text-2xl'> Accurate Image Classification </h1>
-                                <p className='text-base text-[#A3A3A3] pr-2'>Enhance support by precisely categorizing images for faster resolutions </p>
-                                <div className='h-[68%] w-[90%] bg-[#171717] opacity-[0.8] rounded-2xl p-4 border-[#262626] border'>
-                                    <div className='rounded-2xl h-[100%] w-[100%] bg-cover bg-center' style={{ backgroundImage: `url(${one_img})` }}>
+                   
+                    <div className='h-[60%] w-[100%] flex flex-col-reverse md:flex-row justify-center items-center'>
+                       
+                        <div className='h-[100%] w-[100%] md:w-[66.6%] flex flex-col justify-center items-center'>
+                            <div className='h-[50%] w-[100%] flex flex-col md:flex-row justify-center items-start'>
+                                <div className='h-[100%] flex flex-col justify-start items-center md:items-start gap-2 pl-3 md:border-r border-b border-[#262626]'>
+                                    <h1 className='text-white text-2xl'> Accurate Image Classification </h1>
+                                    <p className='text-base text-[#A3A3A3] pr-2'>Enhance support by precisely categorizing images for faster resolutions </p>
+                                    <div className='h-[45vh] md:h-[68%] w-[90%] bg-[#171717] opacity-[0.8] rounded-2xl p-4 border-[#262626] border'>
+                                        <div className='rounded-2xl h-[100%] w-[100%] bg-cover bg-center' style={{ backgroundImage: `url(${one_img})` }}>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='h-[100%] flex flex-col justify-start items-start gap-2 pl-4 md:border-r border-b border-[#262626]'>
+                                    <h1 className='text-white text-2xl'> Automated Quality Audits </h1>
+                                    <p className='text-base text-[#A3A3A3] pr-4'>Ensure complete oversight by automating quality checks across all interactions</p>
+                                    <div className='h-[38vh] md:h-[58%] w-[90%] bg-[#171717] border-[#262626] border opacity-[0.8] rounded-2xl p-4 flex flex-col justify-around items-center'>
+                                        <div className='flex flex-row justify-start items-center self-start gap-2'>
+                                            <img className='w-[25px] h-[25px]' src={coverage} alt='coverage' />
+                                            <p className='text-[#F6F6F6]'>SOP coverage </p>
+                                        </div>
+                                        {Audits.map((each, index) => {
+                                            return (
+                                                <div key={index} className='bg-[#292524]  w-[100%] h-[35px] rounded-full flex flex-row justify-start items-center gap-3 pl-4'>
+                                                    <img className='w-[25px] h-[25px]' src={each.image} alt='agents' />
+                                                    <p className='text-[#F6F6F6] text-base'> {each.text}</p>
+                                                </div>
+                                            )
+                                        })}
+                                    </div>
+                                    <div className='bg-[#171717] w-[90%] h-[15%] rounded-2xl  border-[#262626] border p-2 gap-3 flex flex-row justify-center items-center'>
+                                        <img src={opinion} alt='opinion' className='h-[35px] w-[40px]' />
+                                        <p className='text-white text-[15px]'> As a loyal customer, I find this experience very <span className='bg-[#6B46C1]'>&nbsp;disappointing&nbsp;</span></p>
                                     </div>
                                 </div>
                             </div>
-                            <div className='md:hidden sm:block h-[70vh] md:h-[50%] flex flex-col justify-start items-start gap-2 pl-4 md:border-r border-b border-[#262626]'>
-                                <h1 className='text-white text-2xl'> Automated Quality Audits </h1>
-                                <p className='text-base text-[#A3A3A3] pr-4'>Ensure complete oversight by automating quality checks across all interactions</p>
-                                <div className='h-[58%] w-[90%] bg-[#171717] border-[#262626] border opacity-[0.8] rounded-2xl p-4 flex flex-col justify-around items-center'>
-                                    <div className='flex flex-row justify-start items-center self-start gap-2'>
-                                        <img className='w-[25px] h-[25px]' src={coverage} alt='coverage' />
-                                        <p className='text-[#F6F6F6]'>SOP coverage </p>
+
+                            <div className='h-[50%] w-[100%] flex flex-col md:flex-row  justify-center items-start'>
+                             
+                                <div className='h-[100%] md:w-[50%] flex flex-col justify-start items-start gap-2 pl-2 md:border-r border-b border-[#262626] pt-4'>
+                                    <h1 className='text-white text-2xl md:my-2'> Voice AI Agents </h1>
+                                    <p className='text-base text-[#A3A3A3] pr-8 md:my-2'>Build and deploy low cost voice AI agents that talk and take actions like humans </p>
+                                    <div className='md:my-4 h-[30vh] md:h-[58%] w-[90%] bg-[#171717] border-[#262626] border opacity-[0.8] rounded-2xl p-4 flex flex-col justify-around items-center'>
+                                        {AIAgents.map((each, index) => {
+                                            return (
+                                                <div key={index} className='bg-[#292524]  w-[100%] h-[50px] rounded-full flex flex-row justify-start items-center gap-3 pl-4'>
+                                                    <img className='w-[30px] h-[30px]' src={each.image} alt='agents' />
+                                                    <p className='text-[#F6F6F6] text-base'> {each.text}</p>
+                                                </div>
+                                            )
+                                        })}
                                     </div>
-                                    {Audits.map((each, index) => {
-                                        return (
-                                            <div key={index} className='bg-[#292524]  w-[100%] h-[35px] rounded-full flex flex-row justify-start items-center gap-3 pl-4'>
-                                                <img className='w-[25px] h-[25px]' src={each.image} alt='agents' />
-                                                <p className='text-[#F6F6F6] text-base'> {each.text}</p>
-                                            </div>
-                                        )
-                                    })}
                                 </div>
-                                <div className='bg-[#171717] w-[90%] h-[15%] rounded-2xl  border-[#262626] border p-2 gap-3 flex flex-row justify-center items-center'>
-                                    <img src={opinion} alt='opinion' className='h-[35px] w-[40px]' />
-                                    <p className='text-white text-[15px]'> As a loyal customer, I find this experience very <span className='bg-[#6B46C1]'>&nbsp;disappointing&nbsp;</span></p>
+                                <div className='h-[100%] md:w-[56%] flex flex-col justify-start items-start gap-4 pl-3 md:border-r border-b border-[#262626] pt-4'>
+                                    <h1 className='text-white text-2xl md:my-2'> AI Powered Analytic </h1>
+                                    <p className='text-base text-[#A3A3A3] md:my-2'>Identify issues, ask questions and unlock valuable insights from your interaction </p>
+                                    <div className='flex flex-row justify-start pl-3 items-center gap-2 pt-4 md:my-2'>
+                                        <img className='h-[20px] w-[20px]' src={search} alt='search' />
+                                        <p className='text-[#A3A3A3] '> Type your question </p>
+                                    </div>
+                                    <div className='h-[14%] w-[90%] bg-[transparent] border border-[#262626] rounded-2xl p-4'>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className='hidden md:block md:h-[50%] flex flex-col justify-start items-start gap-2 pl-3 border-r border-b border-[#262626] pt-4'>
-                                <h1 className='text-white text-2xl md:my-2'> Voice AI Agents </h1>
-                                <p className='text-base text-[#A3A3A3] pr-8 md:my-2'>Build and deploy low cost voice AI agents that talk and take actions like humans </p>
-                                <div className='md:my-4 h-[58%] w-[90%] bg-[#171717] border-[#262626] border opacity-[0.8] rounded-2xl p-4 flex flex-col justify-around items-center'>
-                                    {AIAgents.map((each, index) => {
-                                        return (
-                                            <div key={index} className='bg-[#292524]  w-[100%] h-[50px] rounded-full flex flex-row justify-start items-center gap-3 pl-4'>
-                                                <img className='w-[30px] h-[30px]' src={each.image} alt='agents' />
-                                                <p className='text-[#F6F6F6] text-base'> {each.text}</p>
-                                            </div>
-                                        )
-                                    })}
-                                </div>
-                            </div>
-                            <div className='md:hidden sm:block h-[54vh] md:h-[50%] flex flex-col justify-start items-start gap-2 pl-3 md:border-r border-b border-[#262626] pt-4'>
-                                <h1 className='text-white text-2xl'> Voice AI Agents </h1>
-                                <p className='text-base text-[#A3A3A3] pr-8'>Build and deploy low cost voice AI agents that talk and take actions like humans </p>
-                                <div className='h-[58%] w-[90%] bg-[#171717] border-[#262626] border opacity-[0.8] rounded-2xl p-4 flex flex-col justify-around items-center'>
-                                    {AIAgents.map((each, index) => {
-                                        return (
-                                            <div key={index} className='bg-[#292524]  w-[100%] h-[50px] rounded-full flex flex-row justify-start items-center gap-3 pl-4'>
-                                                <img className='w-[30px] h-[30px]' src={each.image} alt='agents' />
-                                                <p className='text-[#F6F6F6] text-base'> {each.text}</p>
-                                            </div>
-                                        )
-                                    })}
-                                </div>
+                            
                             </div>
                         </div>
 
 
-
-                        <div className='hidden md:block md:h-[100%] md:w-[33.3%] sm:-order-2 md:order-none'>
-                            <div className='h-[50%] flex flex-col justify-start items-start gap-2 pl-4 border-r border-b border-[#262626]'>
-                                <h1 className='text-white text-2xl'> Automated Quality Audits </h1>
-                                <p className='text-base text-[#A3A3A3] pr-4'>Ensure complete oversight by automating quality checks across all interactions</p>
-                                <div className='h-[58%] w-[90%] bg-[#171717] border-[#262626] border opacity-[0.8] rounded-2xl p-4 flex flex-col justify-around items-center'>
-                                    <div className='flex flex-row justify-start items-center self-start gap-2'>
-                                        <img className='w-[25px] h-[25px]' src={coverage} alt='coverage' />
-                                        <p className='text-[#F6F6F6]'>SOP coverage </p>
-                                    </div>
-                                    {Audits.map((each, index) => {
-                                        return (
-                                            <div key={index} className='bg-[#292524]  w-[100%] h-[35px] rounded-full flex flex-row justify-start items-center gap-3 pl-4'>
-                                                <img className='w-[25px] h-[25px]' src={each.image} alt='agents' />
-                                                <p className='text-[#F6F6F6] text-base'> {each.text}</p>
-                                            </div>
-                                        )
-                                    })}
-                                </div>
-                                <div className='bg-[#171717] w-[90%] h-[15%] rounded-2xl  border-[#262626] border p-2 gap-3 flex flex-row justify-center items-center'>
-                                    <img src={opinion} alt='opinion' className='h-[35px] w-[40px]' />
-                                    <p className='text-white text-[15px]'> As a loyal customer, I find this experience very <span className='bg-[#6B46C1]'>&nbsp;disappointing&nbsp;</span></p>
-                                </div>
-                            </div>
-                          
-                            <div className='hidden md:block h-[35vh] md:h-[50%] flex flex-col justify-start items-start gap-4 pl-3 md:border-r border-b border-[#262626] pt-4'>
-                                <h1 className='text-white text-2xl md:my-2'> AI Powered Analytic </h1>
-                                <p className='text-base text-[#A3A3A3] md:my-2'>Identify issues, ask questions and unlock valuable insights from your interaction </p>
-                                <div className='flex flex-row justify-start pl-3 items-center gap-2 pt-4 md:my-2'>
-                                    <img className='h-[20px] w-[20px]' src={search} alt='search' />
-                                    <p className='text-[#A3A3A3] '> Type your question </p>
-                                </div>
-                                <div className='h-[14%] w-[90%] bg-[transparent] border border-[#262626] rounded-2xl p-4'>
-                                </div>
-                            </div>
-                          
-                        </div>
-                        
-                        <div className='h-[100vh] md:h-[100%] md:w-[33.3%] sm:-order-1 md:order-none'>
-                            <div className=' h-[100%] flex flex-col justify-start items-start gap-4 border-b border-[#262626]'>
+                        <div className='h-[110vh] md:h-[99.9%] md:w-[33.3%]'>
+                            <div className=' h-[100%] flex flex-col justify-start items-start gap-3 border-b border-[#262626]'>
                                 <h1 className='text-white text-2xl pl-3'> Intelligent Conversations. Effortless Support </h1>
                                 <p className='text-base text-[#A3A3A3] pl-3'>Seamlessly integrate data sources and SOPs to generate accurate responses and actions </p>
                                 <div className='h-[100%] w-[94%] bg-[#171717] opacity-[0.8] rounded-t-2xl px-4 pt-4 self-center'>
                                     <div className='rounded-t-2xl h-[100%] w-[100%] bg-cover bg-center' style={{ backgroundImage: `url(${two_img})` }}>
-
                                     </div>
                                 </div>
                             </div>
@@ -203,7 +170,9 @@ const Features: React.FC = () => {
                             </div>
                         </div>
                     </div>
+                
                 </div>
+            
             </div>
         </div>
     )
