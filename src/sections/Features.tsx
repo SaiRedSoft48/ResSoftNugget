@@ -10,7 +10,7 @@ import FluidIntegrations from '../components/features/FluidIntegrations'
 
 const Features: React.FC = () => {
     return (
-        <div className='bg-black min-h-[100vh] pt-4'>
+        <div className='bg-black min-h-[100vh] pt-10 md:pt-4'>
             <FeatureHeader />
             <div className='md:h-[240vh] flex flex-row justify-center items-start w-[100%] pt-8'>
                 <div className='md:h-[230vh] flex flex-col justify-center items-center w-[90%]'>

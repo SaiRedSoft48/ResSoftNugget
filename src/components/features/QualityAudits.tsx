@@ -4,9 +4,9 @@ import { imageImports } from '../../utils/importImages'
 const QualityAudits: React.FC = () => {
     const { coverage, opinion } = imageImports
   return (
-      <div className='h-[100%] flex flex-col justify-start items-start gap-2 pl-4 md:border-r border-b border-[#262626]'>
-          <h1 className='text-white text-2xl'> Automated Quality Audits </h1>
-          <p className='text-base text-[#A3A3A3] pr-4'>Ensure complete oversight by automating quality checks across all interactions</p>
+      <div className='h-[100%] flex flex-col md:justify-start md:items-start justify-center items-center gap-2 pl-4 md:border-r border-b border-[#262626] md:py-0 py-4'>
+          <h1 className='text-white text-[20px] md:text-[24px] text-center md:text-left'> Automated Quality Audits </h1>
+          <p className='text-[14px] md:text-[16px] text-center md:text-left text-[#A3A3A3] pr-4'>Ensure complete oversight by automating quality checks across all interactions</p>
           <div className='h-[38vh] md:h-[58%] w-[90%] bg-[#171717] border-[#262626] border opacity-[0.8] rounded-2xl p-4 flex flex-col justify-around items-center'>
               <div className='flex flex-row justify-start items-center self-start gap-2'>
                   <img className='w-[25px] h-[25px]' src={coverage} alt='coverage' />
