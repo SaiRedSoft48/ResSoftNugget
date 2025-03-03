@@ -4,7 +4,7 @@ import Button from './Button'
 const CTA: React.FC = () => {
     return (
         <div className='flex flex-col justify-center items-center w-[100%]'>
-            <div className=' flex flex-col justify-center items-center h-[50vh] w-[88%] rounded-2xl bg-cover bg-center' style={{ backgroundImage: `url(${cta_bg})` }} >
+            <div className=' flex flex-col justify-center items-center py-4 md:py-0 md:h-[50vh] w-[88%] rounded-2xl bg-cover bg-center' style={{ backgroundImage: `url(${cta_bg})` }} >
                 <div className='flex flex-col justify-center items-center gap-8 w-[90%]'>
                     <h1 className="text-white text-xl md:text-6xl text-center ">
                         Ready to transform your business?
