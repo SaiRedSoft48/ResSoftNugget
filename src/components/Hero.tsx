@@ -13,6 +13,8 @@ const Hero: React.FC = () => {
                 <h1 className="text-white text-[20px] md:text-7xl relative font-bold px-2 md:px-0">
                     <span className="relative z-10">AI Agents, </span>
                     <img src={headingSvg} alt="Highlight" className="absolute top-[-90px] left-[10px] md:top-[-25px] md:left-[20px] w-[130px] h-[200px] md:w-[480px] md:h-[120px] max-w-full" />
+                    <img src={headingSvg} alt="Highlight" className="absolute top-[-90px] left-[10px] md:top-[-25px] md:left-[20px] w-[130px] h-[200px] md:w-[480px] md:h-[120px] max-w-full" />
+                    <img src={headingSvg} alt="Highlight" className="absolute top-[-90px] left-[10px] md:top-[-25px] md:left-[20px] w-[130px] h-[200px] md:w-[480px] md:h-[120px] max-w-full" />
                     <span> build for speed, scale, and quality </span>
                 </h1>
                 <img src={circular} alt='Circular' className='hidden md:inline-block absolute left-[-130px] top-[400px] w-40 md:w-60 max-w-full' />
