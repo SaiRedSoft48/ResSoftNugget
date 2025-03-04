@@ -16,6 +16,13 @@ import suggestions from "../assets/features/agents/suggestion.png";
 import time from "../assets/features/agents/time.png";
 import actions from "../assets/features/agents/actions.png";
 import fluid from "../assets/features/fluid.png";
+import compliance from "../assets/impact/compliance.png"
+import queries from "../assets/impact/queries.png"
+import resolution from "../assets/impact/resolution.png"
+import blinkit from "../assets/companies/blinkit.png";
+import district from "../assets/companies/district.png";
+import hyperpure from "../assets/companies/hyperpure.png";
+import zomato from "../assets/companies/zomato.png";
 
 export const imageImports = {
     code,
@@ -36,4 +43,11 @@ export const imageImports = {
     time,
     actions,
     fluid,
+    queries,
+    compliance,
+    resolution,
+    blinkit,
+    district,
+    hyperpure,
+    zomato
 };

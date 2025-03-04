@@ -1,13 +1,6 @@
 import React from 'react'
+import { ImpactProps } from "../constants/constant"
 
-interface ImpactProps {
-    card: {
-        id: string;
-        image: string;
-        headline: string;
-        description: string;
-    };
-}
 const ImpactCard: React.FC<ImpactProps> = ({ card }) => {
     return (
         <div className='bg-[#262626] rounded-2xl w-[80%] md:w-[32.5%] h-[150px] md:h-[200px] py-6 px-4 flex flex-col justify-center items-start p-2 gap-1 mb-2 md:mb-0'>

@@ -1,11 +1,9 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
-import blinkit from "../assets/companies/blinkit.png";
-import district from "../assets/companies/district.png";
-import hyperpure from "../assets/companies/hyperpure.png";
-import zomato from "../assets/companies/zomato.png";
+import { imageImports } from "../utils/importImages"
 
 const MarqueeScroll: React.FC = () => {
+  const { zomato, blinkit, hyperpure, district } = imageImports
   return (
     <div className="relative w-[92%] my-5 overflow-hidden">
       <div className="absolute top-0 left-0 h-full w-[100px] bg-gradient-to-r from-black to-transparent pointer-events-none md:z-10" />
