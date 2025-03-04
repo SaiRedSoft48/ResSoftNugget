@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
                     transition={{ type: "spring", stiffness: 100, damping: 10, duration: 0.8 }}
                 />
                 <motion.h1
-                    className="text-white text-[20px] md:text-7xl relative font-bold px-2 md:px-0"
+                    className="text-white text-[28px] md:text-7xl relative font-bold px-2 md:px-0"
                     initial={{ y: 100, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ type: "spring", stiffness: 100, damping: 10, duration: 0.8 }}
@@ -27,11 +27,19 @@ const Hero: React.FC = () => {
                     <motion.img
                         src={headingSvg}
                         alt="Highlight"
-                        className="absolute top-[-90px] left-[10px] md:top-[-25px] md:left-[20px] w-[130px] h-[200px] md:w-[480px] md:h-[120px] max-w-full"
+                        className="absolute top-[-83px] left-[42px] md:top-[-25px] md:left-[20px] w-[170px] h-[200px] md:w-[480px] md:h-[120px] max-w-full"
                         initial={{ scaleX: 2, opacity: 0 }}
                         animate={{ scaleX: 1, opacity: 1 }}
                         transition={{ type: "spring", stiffness: 150, damping: 15, duration: 1.2 }}
                         style={{ transformOrigin: "center" }} 
+                    /><motion.img
+                        src={headingSvg}
+                        alt="Highlight"
+                        className="absolute top-[-83px] left-[42px] md:top-[-25px] md:left-[20px] w-[170px] h-[200px] md:w-[480px] md:h-[120px] max-w-full"
+                        initial={{ scaleX: 2, opacity: 0 }}
+                        animate={{ scaleX: 1, opacity: 1 }}
+                        transition={{ type: "spring", stiffness: 150, damping: 15, duration: 1.2 }}
+                        style={{ transformOrigin: "center" }}
                     />
                     <span> build for speed, scale, and quality </span>
                 </motion.h1>

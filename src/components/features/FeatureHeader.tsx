@@ -13,6 +13,11 @@ const FeatureHeader: React.FC = () => {
                     alt="Highlight"
                     className="absolute top-[-8px] left-[140px] md:top-[-20px] md:left-[320px] w-[166px] h-[50px] md:w-[280px] md:h-[84px] max-w-full"
                 />
+                <img
+                    src={headingSvg}
+                    alt="Highlight"
+                    className="absolute top-[-8px] left-[140px] md:top-[-20px] md:left-[320px] w-[166px] h-[50px] md:w-[280px] md:h-[84px] max-w-full"
+                />
                 <span className="relative z-10"> you'll ever need</span>
             </h1>
 
