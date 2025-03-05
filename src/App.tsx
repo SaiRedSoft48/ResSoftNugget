@@ -1,7 +1,8 @@
-import React from 'react'
-import Home from './sections/Home'
-import Contact from './sections/Contact'
-import Impact from './sections/Impact'
+import React from "react";
+
+import Contact from "./sections/contact/Contact";
+import Home from "./sections/home/Home";
+import Impact from "./sections/impact/Impact";
 
 const App: React.FC = () => {
   return (
@@ -10,7 +11,7 @@ const App: React.FC = () => {
       <Impact />
       <Contact />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

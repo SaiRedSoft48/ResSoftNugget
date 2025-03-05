@@ -1,53 +1,63 @@
-import code from "../assets/features/head/code.png";
-import analytics from "../assets/features/head/analytics.png";
-import effective from "../assets/features/head/effective.png";
+import blinkit_img from "../assets/companies/blinkit.png";
+import district_img from "../assets/companies/district.png";
+import hyperpure_img from "../assets/companies/hyperpure.png";
+import zomato_img from "../assets/companies/zomato.png";
+import actions_img from "../assets/features/agents/actions.png";
+import chat_img from "../assets/features/agents/comments.png";
+import suggestions_img from "../assets/features/agents/suggestion.png";
+import time_img from "../assets/features/agents/time.png";
+import correct_img from "../assets/features/audits/correct.png";
+import coverage_img from "../assets/features/audits/coverage.png";
+import opinion_img from "../assets/features/audits/opinion.png";
+import search_img from "../assets/features/audits/search.png";
+import wrong_img from "../assets/features/audits/wrong.png";
 import one_img from "../assets/features/content/one.png";
 import two_img from "../assets/features/content/two.png";
-import agent_one from "../assets/features/voice_agents/latency.png";
-import agent_two from "../assets/features/voice_agents/language.png";
-import agent_three from "../assets/features/voice_agents/function.png";
-import coverage from "../assets/features/audits/coverage.png";
-import opinion from "../assets/features/audits/opinion.png";
-import correct from "../assets/features/audits/correct.png";
-import wrong from "../assets/features/audits/wrong.png";
-import search from "../assets/features/audits/search.png";
-import chat from "../assets/features/agents/comments.png";
-import suggestions from "../assets/features/agents/suggestion.png";
-import time from "../assets/features/agents/time.png";
-import actions from "../assets/features/agents/actions.png";
-import fluid from "../assets/features/fluid.png";
-import compliance from "../assets/impact/compliance.png"
-import queries from "../assets/impact/queries.png"
-import resolution from "../assets/impact/resolution.png"
-import blinkit from "../assets/companies/blinkit.png";
-import district from "../assets/companies/district.png";
-import hyperpure from "../assets/companies/hyperpure.png";
-import zomato from "../assets/companies/zomato.png";
+import fluid_img from "../assets/features/fluid.png";
+import analytics_img from "../assets/features/head/analytics.png";
+import code_img from "../assets/features/head/code.png";
+import effective_img from "../assets/features/head/effective.png";
+import agent_three_img from "../assets/features/voice_agents/function.png";
+import agent_two_img from "../assets/features/voice_agents/language.png";
+import agent_one_img from "../assets/features/voice_agents/latency.png";
+import hero_bg_one_img from "../assets/hero/bg_one.png";
+import hero_bg_two_img from "../assets/hero/bg_two.png";
+import hero_circular_img from "../assets/hero/circular.png";
+import hero_hexagon_img from "../assets/hero/hexagon.png";
+import hero_heading_img from "../assets/hero/Vector.svg";
+import compliance_img from "../assets/impact/compliance.png";
+import queries_img from "../assets/impact/queries.png";
+import resolution_img from "../assets/impact/resolution.png";
 
 export const imageImports = {
-    code,
-    analytics,
-    effective,
-    one_img,
-    two_img,
-    agent_one,
-    agent_two,
-    agent_three,
-    coverage,
-    opinion,
-    correct,
-    wrong,
-    search,
-    chat,
-    suggestions,
-    time,
-    actions,
-    fluid,
-    queries,
-    compliance,
-    resolution,
-    blinkit,
-    district,
-    hyperpure,
-    zomato
+  code_img,
+  analytics_img,
+  effective_img,
+  one_img,
+  two_img,
+  agent_one_img,
+  agent_two_img,
+  agent_three_img,
+  coverage_img,
+  opinion_img,
+  correct_img,
+  wrong_img,
+  search_img,
+  chat_img,
+  suggestions_img,
+  time_img,
+  actions_img,
+  fluid_img,
+  queries_img,
+  compliance_img,
+  resolution_img,
+  blinkit_img,
+  district_img,
+  hyperpure_img,
+  zomato_img,
+  hero_bg_one_img,
+  hero_bg_two_img,
+  hero_heading_img,
+  hero_circular_img,
+  hero_hexagon_img,
 };
