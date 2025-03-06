@@ -26,7 +26,7 @@ const Features: React.FC = () => {
                 <AIAnalytics />
               </div>
             </div>
-            <div className="h-[110vh] md:h-[99.9%] md:w-[33.3%]">
+            <div className="h-[450px] md:h-[100%] md:w-[33.3%]">
               <IntelligentConversations />
             </div>
           </div>

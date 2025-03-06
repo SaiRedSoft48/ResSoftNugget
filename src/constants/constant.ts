@@ -39,7 +39,7 @@ export interface ImpactProps {
   };
 }
 
-export const HeadData: Data[] = [
+export const FeatureHeadData: Data[] = [
   { id: "1", image: code_img, text: "No-Code" },
   { id: "2", image: effective_img, text: "Cost-Effective" },
   { id: "3", image: analytics_img, text: "Powerful Analytics" },

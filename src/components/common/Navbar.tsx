@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
 
   return (
     <motion.div
-      className="w-full flex justify-center items-center p-2 fixed top-0 z-50"
+      className="w-full flex justify-center items-center p-2 fixed top-[2px] z-50"
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{
@@ -39,7 +39,8 @@ const Navbar: React.FC = () => {
       }}
     >
       <div
-        className={`w-[95%] h-12 md:h-20 flex flex-row justify-between items-center px-2.5 md:px-8 rounded-full border-gray-900 
+        role="banner"
+        className={`w-[95%] h-16 md:h-20 flex flex-row justify-between items-center px-3.5 md:px-8 rounded-full border-gray-900 
                 ${isMobile ? "bg-[#171717] shadow-lg" : isScrolled ? "bg-[#171717] shadow-lg" : "bg-transparent"}`}
       >
         <div>

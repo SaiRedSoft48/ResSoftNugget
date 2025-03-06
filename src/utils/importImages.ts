@@ -11,8 +11,9 @@ import coverage_img from "../assets/features/audits/coverage.png";
 import opinion_img from "../assets/features/audits/opinion.png";
 import search_img from "../assets/features/audits/search.png";
 import wrong_img from "../assets/features/audits/wrong.png";
-import one_img from "../assets/features/content/one.png";
-import two_img from "../assets/features/content/two.png";
+import classfication_img from "../assets/features/content/classfication_img.png";
+import support_desk_img from "../assets/features/content/support_desk_img.png";
+import support_mb_img from "../assets/features/content/support_mb_img.png";
 import fluid_img from "../assets/features/fluid.png";
 import analytics_img from "../assets/features/head/analytics.png";
 import code_img from "../assets/features/head/code.png";
@@ -29,12 +30,13 @@ import compliance_img from "../assets/impact/compliance.png";
 import queries_img from "../assets/impact/queries.png";
 import resolution_img from "../assets/impact/resolution.png";
 
+  
 export const imageImports = {
   code_img,
   analytics_img,
   effective_img,
-  one_img,
-  two_img,
+  classfication_img,
+  support_desk_img,
   agent_one_img,
   agent_two_img,
   agent_three_img,
@@ -60,4 +62,5 @@ export const imageImports = {
   hero_heading_img,
   hero_circular_img,
   hero_hexagon_img,
+  support_mb_img
 };
