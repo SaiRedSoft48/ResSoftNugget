@@ -17,6 +17,7 @@ const Hero: React.FC = () => {
     hero_bg_one_img,
     hero_bg_two_img,
   } = imageImports;
+  
   return (
     <div className="bg-black h-[100vh] md:h-[185vh] flex flex-col justify-center items-center overflow-hidden">
       <div className="relative h-[110vh] flex flex-col items-center text-center w-[100%] pt-40 overflow-hidden">
