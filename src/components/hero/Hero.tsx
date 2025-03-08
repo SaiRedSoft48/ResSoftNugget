@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 
-import { fadeDownScale, fadeUpHeading, fadeUpScale, HeroCicularMotion, HeroDescriptionMotion, HeroHexagonMotion, heroVectorMotion } from "../../constants/animations";
+import { fadeUpHeading, HeroCicularMotion, HeroDescriptionMotion, HeroHexagonMotion, heroVectorMotion } from "../../constants/animations";
 import MarqueeScroll from "../../sections/home/MarqueeScroll";
 import { imageImports } from "../../utils/importImages";
 import Button from "../common/Button";
@@ -14,15 +14,15 @@ const Hero: React.FC = () => {
     hero_heading_img,
     hero_hexagon_img,
     hero_circular_img,
-    hero_bg_one_img,
-    hero_bg_two_img,
+    hero_rotation_shield,
+    hero_protect_shield
   } = imageImports;
-  
+
   return (
     <div className="bg-black h-[100vh] md:h-[185vh] flex flex-col justify-center items-center overflow-hidden">
-      <div className="relative h-[110vh] flex flex-col items-center text-center w-[100%] pt-40 overflow-hidden">
-        <div className="absolute top-[80px] md:top-[40px] flex flex-row justify-between items-center md:left-1/5 h-[200px] w-[80vw] md:h-[400px] md:w-[60vw]">
-          <div className="h-[100%] w-[50%]">
+      <div className="relative h-[110vh] flex flex-col items-center text-center w-[100%] pt-40">
+        <div className="absolute top-[80px] md:top-[40px] flex flex-row justify-between items-center md:left-1/5 h-[250px] w-[80vw] md:h-[65vh] 2xl:h-[50vh] md:w-[60vw]">
+          {/* <div className="border-red-500 border h-[100%] w-[50%]">
             <motion.img
               {...fadeUpScale(0)}
               className="relative left-[-10px] md:left-[-40px] top-[25px] md:top-[-25px] md:h-[100%] w-[100%]"
@@ -30,11 +30,38 @@ const Hero: React.FC = () => {
               alt="hero_bg"
             />
           </div>
-          <div className="h-[100%] w-[50%]">
+          <div className="border-red-500 border h-[100%] w-[50%]">
             <motion.img
               {...fadeDownScale(0)}
               className="relative md:bottom-[-55px] bottom-[-95px] md:h-[100%] w-[100%]"
               src={hero_bg_two_img}
+              alt="hero_bg"
+            />
+          </div> */}
+          <div className="h-[100%] w-[200%] relative md:left-[90px] md:top-[-80px] left-[10px] top-[-20px]">
+            <motion.img
+              className="relative left-[-10px] md:left-[-40px] top-[25px] md:top-[-25px] md:h-[160%] md:w-[50vw]"
+              src={hero_rotation_shield}
+              alt="hero_bg"
+              style={{
+                willChange: 'transform',
+              }}
+              animate={{
+                rotate: [0, 360],
+              }}
+              transition={{
+                repeat: Infinity,
+                duration: 8.0,
+                ease: "linear",
+              }}
+            />
+          </div>
+        </div>
+        <div className="hidden md:block absolute top-[80px] md:top-[40px] flex flex-row justify-between items-center h-[250px] w-[80vw] md:h-[65vh] 2xl:h-[50vh] md:w-[100vw]">
+          <div className="h-[100%] w-[200%] relative md:left-[90px] md:top-[-80px] left-[10px] top-[-20px]">
+            <img
+              className="relative left-[-10px] md:left-[-20px] md:top-[55px] md:h-[140%] md:w-[90vw]"
+              src={hero_protect_shield}
               alt="hero_bg"
             />
           </div>
@@ -80,7 +107,7 @@ const Hero: React.FC = () => {
         <motion.img
           src={hero_circular_img}
           alt="Circular"
-          className="hidden md:inline-block absolute left-[-130px] top-[400px] w-40 md:w-60 max-w-full"
+          className="hidden md:inline-block absolute left-[-130px] top-[400px] w-40 md:w-60 z-999 max-w-full"
           {...HeroCicularMotion}
         />
         <motion.p

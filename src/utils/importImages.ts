@@ -21,7 +21,9 @@ import effective_img from "../assets/features/head/effective.png";
 import agent_three_img from "../assets/features/voice_agents/function.png";
 import agent_two_img from "../assets/features/voice_agents/language.png";
 import agent_one_img from "../assets/features/voice_agents/latency.png";
+import hero_protect_shield from "../assets/hero/bg_four.png";
 import hero_bg_one_img from "../assets/hero/bg_one.png";
+import hero_rotation_shield from "../assets/hero/bg_three.png";
 import hero_bg_two_img from "../assets/hero/bg_two.png";
 import hero_circular_img from "../assets/hero/circular.png";
 import hero_hexagon_img from "../assets/hero/hexagon.png";
@@ -29,6 +31,7 @@ import hero_heading_img from "../assets/hero/Vector.svg";
 import compliance_img from "../assets/impact/compliance.png";
 import queries_img from "../assets/impact/queries.png";
 import resolution_img from "../assets/impact/resolution.png";
+
 
   
 export const imageImports = {
@@ -62,5 +65,7 @@ export const imageImports = {
   hero_heading_img,
   hero_circular_img,
   hero_hexagon_img,
-  support_mb_img
+  support_mb_img,
+  hero_rotation_shield,
+  hero_protect_shield
 };

@@ -21,12 +21,16 @@ const IntelligentConversations: React.FC = () => {
           Seamlessly integrate data sources and SOPs to generate accurate responses and actions
         </p>
       </MotionWrapper>
-      <div className="h-[100%] w-[94%] bg-[#171717] opacity-[0.8] rounded-t-2xl px-4 pt-4 self-center">
+      <div className="h-[100%] w-[94%] bg-[#171717] opacity-[0.8] rounded-t-2xl px-4 pt-4 self-center relative overflow-hidden">
         <div
-          className="rounded-t-2xl h-[100%] w-[100%] bg-cover bg-center"
-          style={{ backgroundImage: `url(${isMobile ? support_mb_img : support_desk_img})` }}
+          className="rounded-t-2xl h-[98%] w-[100%] bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${isMobile ? support_mb_img : support_desk_img})`,
+          }}
         ></div>
+        <div className="absolute bottom-0 left-0 w-full h-[10%] bg-gradient-to-t from-black/100 to-transparent pointer-events-none"></div>
       </div>
+
     </div>
   );
 };
