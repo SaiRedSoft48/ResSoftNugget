@@ -14,7 +14,11 @@ import wrong_img from "../assets/features/audits/wrong.png";
 import classfication_img from "../assets/features/content/classfication_img.png";
 import support_desk_img from "../assets/features/content/support_desk_img.png";
 import support_mb_img from "../assets/features/content/support_mb_img.png";
-import fluid_img from "../assets/features/fluid.png";
+import wrapper_img from "../assets/features/content/wrapper_img.png"
+import fluid_angle_one_img from "../assets/features/fluid/angle_1.png"
+import fluid_angle_two_img from "../assets/features/fluid/angle_2.png"
+import fluid_angle_three_img from "../assets/features/fluid/angle_3.png"
+import fluid_img from "../assets/features/fluid/fluid.png";
 import analytics_img from "../assets/features/head/analytics.png";
 import code_img from "../assets/features/head/code.png";
 import effective_img from "../assets/features/head/effective.png";
@@ -67,5 +71,9 @@ export const imageImports = {
   hero_hexagon_img,
   support_mb_img,
   hero_rotation_shield,
-  hero_protect_shield
+  hero_protect_shield,
+  wrapper_img,
+  fluid_angle_one_img,
+  fluid_angle_two_img,
+  fluid_angle_three_img
 };

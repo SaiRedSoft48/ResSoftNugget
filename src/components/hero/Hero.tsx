@@ -21,23 +21,7 @@ const Hero: React.FC = () => {
   return (
     <div className="bg-black h-[100vh] md:h-[185vh] flex flex-col justify-center items-center overflow-hidden">
       <div className="relative h-[110vh] flex flex-col items-center text-center w-[100%] pt-40">
-        <div className="absolute top-[80px] md:top-[40px] flex flex-row justify-between items-center md:left-1/5 h-[250px] w-[80vw] md:h-[65vh] 2xl:h-[50vh] md:w-[60vw]">
-          {/* <div className="border-red-500 border h-[100%] w-[50%]">
-            <motion.img
-              {...fadeUpScale(0)}
-              className="relative left-[-10px] md:left-[-40px] top-[25px] md:top-[-25px] md:h-[100%] w-[100%]"
-              src={hero_bg_one_img}
-              alt="hero_bg"
-            />
-          </div>
-          <div className="border-red-500 border h-[100%] w-[50%]">
-            <motion.img
-              {...fadeDownScale(0)}
-              className="relative md:bottom-[-55px] bottom-[-95px] md:h-[100%] w-[100%]"
-              src={hero_bg_two_img}
-              alt="hero_bg"
-            />
-          </div> */}
+        <div className="absolute top-[80px] md:top-[120px] flex flex-row justify-between items-center md:left-1/4 2xl:left-1/3 h-[250px] w-[80vw] md:h-[360px] md:w-[580px]">
           <div className="h-[100%] w-[200%] relative md:left-[90px] md:top-[-80px] left-[10px] top-[-20px]">
             <motion.img
               className="relative left-[-10px] md:left-[-40px] top-[25px] md:top-[-25px] md:h-[160%] md:w-[50vw]"
@@ -51,7 +35,7 @@ const Hero: React.FC = () => {
               }}
               transition={{
                 repeat: Infinity,
-                duration: 8.0,
+                duration: 6.0,
                 ease: "linear",
               }}
             />
@@ -77,33 +61,42 @@ const Hero: React.FC = () => {
           {...fadeUpHeading(0)}
           className="text-white text-[28px] md:text-7xl relative font-bold px-8 md:px-0"
         >
-          <span className="relative z-10">AI Agents, </span>
-          <motion.img
-            src={hero_heading_img}
-            alt="Highlight"
-            {...heroVectorMotion}
-            className="absolute top-[-83px] left-[42px] md:top-[-25px] md:left-[20px] w-[170px] h-[200px] md:w-[480px] md:h-[120px] max-w-full"
-          />
-          <motion.img
-            src={hero_heading_img}
-            alt="Highlight"
-            className="absolute top-[-83px] left-[42px] md:top-[-25px] md:left-[20px] w-[170px] h-[200px] md:w-[480px] md:h-[120px] max-w-full"
-            {...heroVectorMotion}
-          />
-          <motion.img
-            src={hero_heading_img}
-            alt="Highlight"
-            className="absolute top-[-83px] left-[42px] md:top-[-25px] md:left-[20px] w-[170px] h-[200px] md:w-[480px] md:h-[120px] max-w-full"
-            {...heroVectorMotion}
-          />
-          <motion.img
-            src={hero_heading_img}
-            alt="Highlight"
-            className="absolute top-[-83px] left-[42px] md:top-[-25px] md:left-[20px] w-[170px] h-[200px] md:w-[480px] md:h-[120px] max-w-full"
-            {...heroVectorMotion}
-          />
-          <span> build for speed, scale, and quality </span>
+          <span className="relative inline-block">
+            <span className="relative z-10">AI Agents, </span>
+            <motion.img
+              src={hero_heading_img}
+              alt="Highlight"
+              {...heroVectorMotion}
+              className="absolute top-[-200%] md:top-[-40%] left-0 w-[170px] h-[200px] md:w-[480px] md:h-[120px] max-w-full"
+            />
+            <motion.img
+              src={hero_heading_img}
+              alt="Highlight"
+              {...heroVectorMotion}
+              className="absolute top-[-200%] md:top-[-40%] left-0 w-[170px] h-[200px] md:w-[480px] md:h-[120px] max-w-full"
+            />
+            <motion.img
+              src={hero_heading_img}
+              alt="Highlight"
+              {...heroVectorMotion}
+              className="absolute top-[-200%] md:top-[-40%] left-0 w-[170px] h-[200px] md:w-[480px] md:h-[120px] max-w-full"
+            />
+            <motion.img
+              src={hero_heading_img}
+              alt="Highlight"
+              {...heroVectorMotion}
+              className="absolute top-[-200%] md:top-[-40%] left-0 w-[170px] h-[200px] md:w-[480px] md:h-[120px] max-w-full"
+            />
+            <motion.img
+              src={hero_heading_img}
+              alt="Highlight"
+              {...heroVectorMotion}
+              className="absolute top-[-200%] md:top-[-40%] left-0 w-[170px] h-[200px] md:w-[480px] md:h-[120px] max-w-full"
+            />
+          </span>
+          <span> built for speed, scale, and quality </span>
         </motion.h1>
+
         <motion.img
           src={hero_circular_img}
           alt="Circular"

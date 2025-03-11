@@ -114,3 +114,22 @@ export const HeroHexagonMotion = {
         delay: 0,
     },
 };
+
+
+export const rotateLeftMotion = {
+    initial: { rotate: 0 },
+    animate: { rotate: -360 },
+    transition: {
+        ease: "linear",
+        repeat: Infinity, duration: 6
+    },
+};
+
+export const rotateRightMotion = {
+    initial: { rotate: 0 },
+    animate: { rotate: 360 },
+    transition: {
+        ease: "linear",
+        repeat: Infinity , duration:6
+    },
+};

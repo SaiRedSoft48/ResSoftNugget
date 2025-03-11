@@ -1,5 +1,4 @@
-"use client"
-
+import { motion } from "framer-motion"
 import React, { useState } from "react"
 
 import { featuresDescriptionfadeUp, featuresHeadingfadeUp } from "../../constants/animations"
@@ -7,12 +6,18 @@ import { imageImports } from "../../utils/importImages"
 import MotionWrapper from "../common/MotionWrapper"
 
 const ImageClassification: React.FC = () => {
-  const { classfication_img } = imageImports
+  const { classfication_img, wrapper_img } = imageImports
   const [isHovered, setIsHovered] = useState(false)
+  const [direction, setDirection] = useState<"left" | "right">("left")
 
-  const imageContainerHeight = isHovered ? "100%" : "100%"
-  const contentOpacity = isHovered ? 1 : 0
-  const contentTransition = "opacity 0.3s ease-in-out"
+  const handleMouseEnter = () => {
+    setDirection((prev) => (prev === "left" ? "right" : "left"))
+    setIsHovered(true)
+  }
+
+  const handleMouseLeave = () => {
+    setIsHovered(false)
+  }
 
   return (
     <div className="h-[100%] flex flex-col justify-start items-center md:items-start gap-2 pl-3 md:border-r border-b border-[#262626] md:py-0 py-8">
@@ -22,28 +27,41 @@ const ImageClassification: React.FC = () => {
         </h1>
       </MotionWrapper>
       <MotionWrapper animation={featuresDescriptionfadeUp}>
-        <p className="md:text-base text-[#A3A3A3] pr-2 text-center md:text-left text-[14px] ">
+        <p className="md:text-base text-[#A3A3A3] pr-2 text-center md:text-left text-[14px]">
           Enhance support by precisely categorizing images for faster resolutions
         </p>
       </MotionWrapper>
+
       <div
         className="h-[45vh] md:h-[68%] w-[90%] bg-[#171717] opacity-[0.8] rounded-2xl p-4 border-[#262626] border overflow-hidden"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
         <div
           className="rounded-2xl w-[100%] bg-cover bg-center relative"
           style={{
             backgroundImage: `url(${classfication_img})`,
-            height: imageContainerHeight,
-            transition: "height 0.3s ease-in-out",
+            height: "100%",
           }}
         >
-          <div
+          <motion.div
             className="absolute inset-0 bg-black bg-opacity-70 rounded-2xl p-4 flex flex-col"
-            style={{ opacity: contentOpacity, transition: contentTransition }}
+            initial={{
+              x: direction === "left" ? "100%" : "100%",
+            }}
+            animate={{
+              x: isHovered ? "0%" : direction === "left" ? "100%" : "100%",
+            }}
+            transition={{
+              duration: 0.4,
+              ease: "easeInOut",
+            }}
           >
             <div className="flex flex-row justify-between items-start">
+
+              <div className="absolute left-[-9px] 2xl:left-[-12.5px] top-[20px] md:top-[-10px]">
+                <img className="w-[45%] h-[80%]" src={wrapper_img} />
+              </div>  
               <div>
                 <p className="text-[#A3A3A3] text-[12px]">Primary Object</p>
                 <p className="text-white text-[10px]">Paper cup with a hot beverage (coffee)</p>
@@ -61,8 +79,9 @@ const ImageClassification: React.FC = () => {
                     clipRule="evenodd"
                   />
                 </svg>
-                <p className="text-[10px]"> Analysis Result</p>
+                <p className="text-[10px]">Analysis Result</p>
               </div>
+            
             </div>
 
             <div className="mt-4">
@@ -81,7 +100,7 @@ const ImageClassification: React.FC = () => {
               <p className="text-white text-[10px]">Improper sealing/lid absence</p>
               <p className="text-white text-[10px]">Rough handling during transport</p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
