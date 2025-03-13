@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
     <div className="bg-black h-[100vh] md:h-[185vh] flex flex-col justify-center items-center overflow-hidden">
       <div className="relative h-[110vh] flex flex-col items-center text-center w-[100%] pt-40">
         <div className="absolute top-[80px] md:top-[120px] flex flex-row justify-between items-center md:left-1/4 2xl:left-1/3 h-[250px] w-[80vw] md:h-[360px] md:w-[580px]">
-          <div className="h-[100%] w-[200%] relative md:left-[90px] md:top-[-80px] left-[10px] top-[-20px]">
+          {/* <div className="h-[100%] w-[200%] relative md:left-[90px] md:top-[-80px] left-[10px] top-[-20px]">
             <motion.img
               className="relative left-[-10px] md:left-[-40px] top-[25px] md:top-[-25px] md:h-[160%] md:w-[50vw]"
               src={hero_rotation_shield}
@@ -39,7 +39,27 @@ const Hero: React.FC = () => {
                 ease: "linear",
               }}
             />
+          </div> */}
+          <div className="h-full w-full flex justify-center items-center relative top-[70px] md:top-[0px]">
+            <motion.img
+              className="
+              md:h-[160%] md:w-[50vw]"
+              src={hero_rotation_shield}
+              alt="hero_bg"
+              style={{
+                willChange: 'transform',
+              }}
+              animate={{
+                rotate: [0, 360],
+              }}
+              transition={{
+                repeat: Infinity,
+                duration: 6.0,
+                ease: "linear",
+              }}
+            />
           </div>
+
         </div>
         <div className="hidden md:block absolute top-[80px] md:top-[40px] flex flex-row justify-between items-center h-[250px] w-[80vw] md:h-[65vh] 2xl:h-[50vh] md:w-[100vw]">
           <div className="h-[100%] w-[200%] relative md:left-[90px] md:top-[-80px] left-[10px] top-[-20px]">
