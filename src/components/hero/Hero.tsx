@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import React from "react";
 
-import { fadeUpHeading, HeroCicularMotion, HeroDescriptionMotion, HeroHexagonMotion, heroVectorMotion } from "../../constants/animations";
+import { HeroCicularMotion, HeroDescriptionMotion, HeroHexagonMotion, threadAnimation } from "../../constants/animations";
+import { threadPath } from "../../constants/constant";
 import MarqueeScroll from "../../sections/home/MarqueeScroll";
 import { imageImports } from "../../utils/importImages";
 import Button from "../common/Button";
@@ -9,9 +10,10 @@ import Button from "../common/Button";
 import AnimatedHeading from "./AnimatedHeading ";
 
 
+
+
 const Hero: React.FC = () => {
   const {
-    hero_heading_img,
     hero_hexagon_img,
     hero_circular_img,
     hero_rotation_shield,
@@ -22,24 +24,6 @@ const Hero: React.FC = () => {
     <div className="bg-black h-[100vh] md:h-[185vh] flex flex-col justify-center items-center overflow-hidden">
       <div className="relative h-[110vh] flex flex-col items-center text-center w-[100%] pt-40">
         <div className="absolute top-[80px] md:top-[120px] flex flex-row justify-between items-center md:left-1/4 2xl:left-1/3 h-[250px] w-[80vw] md:h-[360px] md:w-[580px]">
-          {/* <div className="h-[100%] w-[200%] relative md:left-[90px] md:top-[-80px] left-[10px] top-[-20px]">
-            <motion.img
-              className="relative left-[-10px] md:left-[-40px] top-[25px] md:top-[-25px] md:h-[160%] md:w-[50vw]"
-              src={hero_rotation_shield}
-              alt="hero_bg"
-              style={{
-                willChange: 'transform',
-              }}
-              animate={{
-                rotate: [0, 360],
-              }}
-              transition={{
-                repeat: Infinity,
-                duration: 6.0,
-                ease: "linear",
-              }}
-            />
-          </div> */}
           <div className="h-full w-full flex justify-center items-center relative top-[70px] md:top-[0px]">
             <motion.img
               className="
@@ -78,45 +62,34 @@ const Hero: React.FC = () => {
           {...HeroHexagonMotion}
         />
         <motion.h1
-          {...fadeUpHeading(0)}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
           className="text-white text-[28px] md:text-7xl relative font-bold px-8 md:px-0"
         >
           <span className="relative inline-block">
-            <span className="relative z-10">AI Agents, </span>
-            <motion.img
-              src={hero_heading_img}
-              alt="Highlight"
-              {...heroVectorMotion}
-              className="absolute top-[-200%] md:top-[-40%] left-0 w-[170px] h-[200px] md:w-[480px] md:h-[120px] max-w-full"
-            />
-            <motion.img
-              src={hero_heading_img}
-              alt="Highlight"
-              {...heroVectorMotion}
-              className="absolute top-[-200%] md:top-[-40%] left-0 w-[170px] h-[200px] md:w-[480px] md:h-[120px] max-w-full"
-            />
-            <motion.img
-              src={hero_heading_img}
-              alt="Highlight"
-              {...heroVectorMotion}
-              className="absolute top-[-200%] md:top-[-40%] left-0 w-[170px] h-[200px] md:w-[480px] md:h-[120px] max-w-full"
-            />
-            <motion.img
-              src={hero_heading_img}
-              alt="Highlight"
-              {...heroVectorMotion}
-              className="absolute top-[-200%] md:top-[-40%] left-0 w-[170px] h-[200px] md:w-[480px] md:h-[120px] max-w-full"
-            />
-            <motion.img
-              src={hero_heading_img}
-              alt="Highlight"
-              {...heroVectorMotion}
-              className="absolute top-[-200%] md:top-[-40%] left-0 w-[170px] h-[200px] md:w-[480px] md:h-[120px] max-w-full"
-            />
+            <span className="relative z-0">AI Agents, </span>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <svg
+                viewBox="0 0 286 73"
+                fill="none"
+                className="w-full h-full stroke-secondary"
+                preserveAspectRatio="none"
+              >
+                <motion.path
+                  d={threadPath}
+                  stroke="#ff7f50"
+                  strokeWidth="2"
+                  fill="none"
+                  initial="initial"
+                  animate="animate"
+                  variants={threadAnimation}
+                />
+              </svg>
+            </div>
           </span>
           <span> built for speed, scale, and quality </span>
-        </motion.h1>
-
+        </motion.h1>   
         <motion.img
           src={hero_circular_img}
           alt="Circular"

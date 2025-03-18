@@ -70,12 +70,10 @@ export const fadeUpHeading = (delay: number) => ({
 
 
 export const heroVectorMotion = {
-    initial: { scaleX: 1.5, opacity: 0 },
-    animate: { scaleX: 1, opacity: 1 },
-    transition: {
-        type: "spring",
-        stiffness: 120,
-        damping: 18,
+    initial: { clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)" },
+    animate: {
+        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+        transition: { duration: 1.5, ease: "easeInOut" },
     },
 };
 
@@ -132,4 +130,12 @@ export const rotateRightMotion = {
         ease: "linear",
         repeat: Infinity , duration:6
     },
+};
+
+export const threadAnimation = {
+  initial: { strokeDasharray: "750", strokeDashoffset: 750 },
+  animate: {
+    strokeDashoffset: 0,
+    transition: { duration: 2, ease: "easeInOut" },
+  },
 };
