@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
     hero_hexagon_img,
     hero_circular_img,
     hero_rotation_shield,
-    hero_protect_shield
+    hero_protect_shield_animation
   } = imageImports;
 
   return (
@@ -46,10 +46,10 @@ const Hero: React.FC = () => {
 
         </div>
         <div className="hidden md:block absolute top-[80px] md:top-[40px] flex flex-row justify-between items-center h-[250px] w-[80vw] md:h-[65vh] 2xl:h-[50vh] md:w-[100vw]">
-          <div className="h-[100%] w-[200%] relative md:left-[90px] md:top-[-80px] left-[10px] top-[-20px]">
+          <div className="h-[100%] w-[200%] relative md:left-[90px] md:top-[-80px] left-[10px] top-[-20px] ">
             <img
-              className="relative left-[-10px] md:left-[-20px] md:top-[55px] md:h-[140%] md:w-[90vw]"
-              src={hero_protect_shield}
+              className="relative left-[-10px] md:left-[-100px] md:top-[55px] md:h-[140%] md:w-[100vw] opacity-[20%]"
+              src={hero_protect_shield_animation}
               alt="hero_bg"
             />
           </div>
@@ -68,7 +68,7 @@ const Hero: React.FC = () => {
           className="text-white text-[28px] md:text-7xl relative font-bold px-8 md:px-0"
         >
           <span className="relative inline-block">
-            <span className="relative z-0">AI Agents, </span>
+            <span className="relative">AI Agents, </span>
             <div className="absolute inset-0 flex items-center justify-center">
               <svg
                 viewBox="0 0 286 73"
